@@ -89,7 +89,7 @@ for (letter of phrase1) {
 console.log("nombre de voyelles= " + n);
 }
 comptervoyelle(phrase);
-*/
+
 //---------Pyramide-----------------------
 let p = parseInt(prompt("Nombre d'étages :"));
 
@@ -102,4 +102,29 @@ function pyramides(p) {
 }
 
 pyramides(p);
-
+*/
+//----------------------------------------
+//---------   Devinette ------------------
+//----------------------------------------
+let coup=0;
+let nombre;
+let n=Math.random(0,100);
+console.log(n);
+/*while(nombre!==n){
+nombre=prompt("deviner quel est le nombre entre 0 et 100");
+switch(nombre){
+    case nombre>n:
+        alert("trop grand !");
+        coup=coup+1;
+        break;
+    case nombre<n:
+        alert("trop petit !");
+        coup=coup+1;
+        break;
+    case nombre===n:
+        alert("Gagner ! en "+coup+" coups!");
+        break;
+    default:
+        alert("erreur saisie");
+}
+}
