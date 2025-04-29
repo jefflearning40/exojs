@@ -91,11 +91,15 @@ console.log("nombre de voyelles= " + n);
 comptervoyelle(phrase);
 */
 //---------Pyramide-----------------------
-let pyramide=parseInt(prompt("nombre d'étages :"));
-for(let ligne=1;ligne>pyramide;ligne++){
- let etage="*".repeat(ligne);
- console.log(etage);
+let p = parseInt(prompt("Nombre d'étages :"));
+
+function pyramides(p) {
+    for (let i = 1; i <= p; i++) {
+        let espaces = ' '.repeat(p - i);
+        let etage = '*'.repeat(2 * i - 1); 
+        console.log(espaces + etage);
+    }
 }
 
-
+pyramides(p);
 
