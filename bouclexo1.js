@@ -108,23 +108,20 @@ pyramides(p);
 //----------------------------------------
 let coup=0;
 let nombre;
-let n=Math.random(0,100);
+let n=Math.floor(Math.random()*100);
 console.log(n);
-/*while(nombre!==n){
+while(nombre !==n){
 nombre=prompt("deviner quel est le nombre entre 0 et 100");
-switch(nombre){
-    case nombre>n:
-        alert("trop grand !");
-        coup=coup+1;
-        break;
-    case nombre<n:
-        alert("trop petit !");
-        coup=coup+1;
-        break;
-    case nombre===n:
-        alert("Gagner ! en "+coup+" coups!");
-        break;
-    default:
-        alert("erreur saisie");
+coup=coup+1;
+if (nombre<n){
+    alert("trop petit :");
 }
+else if (nombre>n){
+    alert("trop grand !");
+}
+else{
+    alert("Bravo, vous avez trouve en "+coup+" coups");
+    break;
+}
+
 }
