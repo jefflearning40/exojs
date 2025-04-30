@@ -23,36 +23,27 @@ console.log(nombres.length);*/
 // ------------------------exercice 4---------------------------
 let doublon = [];
 let single = [];
-let occurrences = {};
-
-
+let double = {};
 for (let j = 0; j < 11; j++) {
     let n = Math.floor(Math.random() * 10);
     doublon.push(n);
 }
-
 console.log("Tableau initial doublon:", doublon);
-
-
 for (let a of doublon) {
-    if (occurrences[a]) {
-        occurrences[a]++;
+    if (double[a]) {
+        double[a]++;
     } else {
-        occurrences[a] = 1;
+        double[a] = 1;
     }
 }
-
-
 doublon = [];
-
-
-for (let num in occurrences) {
-    if (occurrences[num] === 1) {
+for (let num in double) {
+    if (double[num] === 1) {
         single.push(parseInt(num));
     } else {
         doublon.push(parseInt(num));
     }
 }
-
 console.log("Tableau single (uniques):", single);
 console.log("Tableau doublon (doublons):", doublon);
+//---------------------------------exercice 5 ---------------------
