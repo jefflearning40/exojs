@@ -89,7 +89,7 @@ for (letter of phrase1) {
 console.log("nombre de voyelles= " + n);
 }
 comptervoyelle(phrase);
-
+*/
 //---------Pyramide-----------------------
 let p = parseInt(prompt("Nombre d'étages :"));
 
@@ -102,7 +102,7 @@ function pyramides(p) {
 }
 
 pyramides(p);
-*/
+/*
 //----------------------------------------
 //---------   Devinette ------------------
 //----------------------------------------
@@ -124,4 +124,4 @@ else{
     break;
 }
 
-}
+}*/
