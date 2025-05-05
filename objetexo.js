@@ -66,7 +66,7 @@ for (let utilisateur of utilisateurs) {
     console.log(utilisateur.ville);
 
 }
-//------------------Bibliotheque-----------------------------------
+//------------------Bibliothèque-----------------------------------
 const bibliotheque = [
     {
         titre: "Le Petit Prince",
