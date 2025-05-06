@@ -23,6 +23,7 @@ function vufilm(aTuVu) {
         note = Number(prompt("Quelle note donnes-tu à ce film entre 1 et 5 ?:"));
       }
       film[newkey] = note; 
+      
       document.querySelector('#resultat').innerHTML = `
       <h2>${film.titre}</h2>
       <ul>
@@ -33,11 +34,7 @@ function vufilm(aTuVu) {
         <li>Note        :${film.note}</li>
 
       </ul>`;
-      /*console.log(film.realisateur);
-      console.log(film.annee);
-      console.log(film.duree);
-      console.log(aTuVu);
-      console.log(film.note);*/
+      
     } else if (aTuVu === "non") {
       
       console.log("Tu n'as pas encore vu ce film.");
@@ -52,9 +49,7 @@ function vufilm(aTuVu) {
     } else {
       aTuVu = ""; 
     }
-  }
-  
-  ;  
+  };  
   }
 
 
