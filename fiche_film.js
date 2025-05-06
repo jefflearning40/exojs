@@ -2,6 +2,7 @@
 let film = {
   titre: "Inception",
   realisateur: "Christopher Nolan",
+  duree:"1H48",
   annee: 2010,
   vu: false
 };
@@ -25,28 +26,28 @@ function vufilm(aTuVu) {
       document.querySelector('#resultat').innerHTML = `
       <h2>${film.titre}</h2>
       <ul>
-      <li>${film.realisateur}</li>
-      <li>${film.annee}</li>
-      <li>${film.duree}</li>
-      <li>${aTuVu} </li>
-      <li>${film.note}</li>
+       <li>Réalisateur  :${film.realisateur}</li>
+        <li>Sorti en    :${film.annee}</li>
+        <li>Durée       :${film.duree}</li>
+        <li>Déjà vu     ?${aTuVu}</li>
+        <li>Note        :${film.note}</li>
 
       </ul>`;
-      console.log(film.realisateur);
+      /*console.log(film.realisateur);
       console.log(film.annee);
       console.log(film.duree);
       console.log(aTuVu);
-      console.log(film.note);
+      console.log(film.note);*/
     } else if (aTuVu === "non") {
       
       console.log("Tu n'as pas encore vu ce film.");
       document.querySelector('#resultat').innerHTML = `
       <h2>${film.titre}</h2>
       <ul>
-        <li>${film.realisateur}</li>
-        <li>${film.annee}</li>
-        <li>${film.duree}</li>
-        <li>${film.vu} ?</li>
+        <li>Réalisateur :${film.realisateur}</li>
+        <li>Sorti en    :${film.annee}</li>
+        <li>Durée       :${film.duree}</li>
+        <li>Déjà vu     ?${aTuVu}</li>
       </ul>`;
     } else {
       aTuVu = ""; 
