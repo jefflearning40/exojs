@@ -1,0 +1,14 @@
+body{
+    background-color: aqua;
+}
+h1{
+    background-image: url();
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration-line: underline;
+    text-shadow: 10px 5px 4px #0006b7
+}
