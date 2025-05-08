@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minuterie</title>
+    <link rel="stylesheet" href="compteur.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <button class="hamburger">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <ul class="menu">
+                <li><a href="#contact">Contactez-moi</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li class="dropdown">
+                    <a href="#recettes" class="dropbtn">Recettes</a>
+                    <div class="dropdown-content">
+                        <a href="#egg">Œufs</a>
+                        <a href="#rice">Riz</a>
+                        <a href="#pasta">Pâtes</a>
+                    </div>
+                </li>
+                <li><a href="#help">Aide</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="titre">Minuterie</h1>
+    <div class="container">
+        <div class="ecran">0</div>
+        <div class="touches">
+            <button class="btn1">+</button>
+            <button class="btn2">-</button>
+            <button class="btn3">Reset</button>
+            <button class="btn4" id="startButton">Start</button>
+        </div>
+        <div class="touches-food">
+            <button class="btn5">Egg</button>
+            <button class="btn6">Rice</button>
+            <button class="btn7">Pasta</button>
+        </div>
+    </div>
+
+    <img src="asssets/oeuf.jpg" alt="Un œuf qui cuit" class="oeuf-image">
+    <p class="slogan">Go take a hike !</p>
+
+    <footer class="footer">
+        <p>Créé le: <span id="date-creation"></span></p>
+        <p>Jean-François</p>
+        <p><a href="mailto:contact@exemple.com">Contactez-moi</a></p>
+    </footer>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Explication des boutons</h2>
+            <p>Voici une explication des boutons de la minuterie :</p>
+            <ul>
+                <li><strong>+</strong> : Augmente le temps de la minuterie(restez appuyer pour accelerer).</li>
+                <li><strong>-</strong> : Diminue le temps de la minuterie.</li>
+                <li><strong>Reset</strong> : Réinitialise le temps à zéro.</li>
+                <li><strong>Start</strong> : Démarre ou arrête la minuterie(double cliquez sur le bouton).</li>
+                <li><strong>Egg</strong> : Définit le temps pour la cuisson d'un œuf.(vous pouvez la modifier avec + ou -)</li>
+                <li><strong>Rice</strong> : Définit le temps pour la cuisson du riz.(vous pouvez la modifier avec + ou -)</li>
+                <li><strong>Pasta</strong> : Définit le temps pour la cuisson des pâtes.(vous pouvez la modifier avec + ou -)</li>
+                <li><strong>Conseils :</strong>Lire les recettes pour vous aider</li>
+            </ul>
+        </div>
+    </div>
+    <div id="about-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>À propos de ce site</h2>
+            <p>Ce site est conçu pour vous aider à gérer le temps de cuisson de différents aliments de manière simple et efficace.</p>
+            <p>Que vous cuisiniez des œufs, du riz ou des pâtes, notre minuterie vous permet de définir le temps de cuisson idéal et de vous concentrer sur d'autres tâches pendant que la minuterie fait le travail pour vous.</p>
+            <p>Nous espérons que ce site vous sera utile et vous aidera à améliorer votre expérience culinaire.</p>
+        </div>
+    </div>
+    <div id="egg-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Conseils de cuisson des œufs</h2>
+            <p>Voici quelques conseils pour cuire des œufs :</p>
+            <ul>
+                <li><a href="#" class="egg-time" data-time="540">9 minutes</a> : Oeuf mollet.</li>
+                <li><a href="#" class="egg-time" data-time="720">12 minutes</a> : Oeuf dur.</li>
+                <li><a href="#" class="egg-time" data-time="180">3 minutes</a> : Oeuf a la coq.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="compteur.js"></script>
+    <script src="compteurhamburger.js"></script>
+    <script src="compteurpopup.js"></script>
+</body>
+</html>

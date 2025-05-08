@@ -1,0 +1,362 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('asssets/Seven Segment.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'cocacola';
+    src: url('asssets/Lobster-Regular.ttf') format('truetype');
+}
+
+body {
+    background-image: url('asssets/texture-materiau-personne-grunge-papier.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block; /* Assurez-vous que le bouton est affiché */
+    padding: 10px; /* Ajoutez du padding si nécessaire */
+}
+
+.hamburger-icon {
+    width: 24px; /* Ajustez la largeur selon vos besoins */
+    height: 24px; /* Ajustez la hauteur selon vos besoins */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white; /* Couleur des barres du hamburger */
+    border-radius: 3px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Ajoutez du padding horizontal pour éviter que le texte soit coupé */
+    display: inline-block; /* Assurez-vous que le padding est respecté */
+}
+.menu li {
+    margin: 0 5px; /* Ajoutez une marge pour espacer les éléments du menu */
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.menu.active {
+    display: block;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.titre {
+    text-align: center;
+    font-family: 'cocacola', Arial, sans-serif;
+    color: #ddb512;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 48px;
+    letter-spacing: 4px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 300px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+}
+
+.ecran {
+    background-color: black;
+    border: solid 10px #4b4c52;
+    font-family: 'Digital-7', monospace;
+    color: red;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.touches {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.touches button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        0 6px 20px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn4.inactive {
+    color: #ff0000;
+}
+
+.btn4.active {
+    color: #00ff00;
+}
+
+.touches button:hover {
+    background-color: #333;
+    box-shadow:
+        0 6px 10px rgba(0, 0, 0, 0.4),
+        0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.touches button:active {
+    background-color: #555;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 3px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+.touches button, .touches-food button {
+    flex: 1;
+    margin: 0 5px;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        0 6px 20px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.touches button:hover, .touches-food button:hover {
+    background-color: #333;
+    box-shadow:
+        0 6px 10px rgba(0, 0, 0, 0.4),
+        0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.touches button:active, .touches-food button:active {
+    background-color: #555;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 3px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.oeuf-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.slogan {
+    text-align: center;
+    font-family: 'cocacola', cursive;
+    color: white;
+    margin-top: 50px;
+    font-size: 48px;
+    font-style: italic;
+    transform: rotate(-10deg);
+}
+
+.footer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-top: 20px;
+    padding: 5px; /* Réduire le padding pour diminuer la hauteur */
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px; /* Réduire la taille de la police */
+    line-height: 1.2; /* Réduire l'interligne */
+}
+
+.footer a {
+    color: #ddb512;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 2px 0; /* Réduire la marge pour les paragraphes */
+}
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Media Query pour les smartphones */
+@media (max-width: 480px) {
+    .hamburger {
+        display: block; /* Affiché sur les petits écrans */
+    }
+
+    .menu {
+        display: none; /* Masqué par défaut sur les petits écrans */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex; /* Affiché lorsque le menu est actif */
+    }
+
+    .titre {
+        font-size: 24px;
+        margin-top: 60px; /* Ajoutez de l'espace pour le menu */
+    }
+
+    /* Autres styles pour les petits écrans */
+    .container {
+        width: 95%;
+        margin-top: 30px;
+    }
+
+    .ecran {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .touches button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .slogan {
+        text-align: center;
+        font-family: 'cocacola', cursive;
+        color: white; /* Assurez-vous que la couleur du texte contraste avec le fond */
+        margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
+        font-size: 24px; /* Ajustez la taille de la police selon vos besoins */
+        font-style: italic;
+        transform: rotate(-10deg);
+        position: relative; /* Assurez-vous que le positionnement est correct */
+        z-index: 10; /* Assurez-vous que le slogan est au-dessus des autres éléments si nécessaire */
+    }
+
+    .footer {
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    
+}
