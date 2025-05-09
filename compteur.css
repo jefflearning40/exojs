@@ -18,6 +18,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
 .navbar {
     background-color: #333;
     color: white;
@@ -25,7 +26,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; /* Assurez-vous que le z-index est inférieur à celui des popups */
 }
 
 .navbar-container {
@@ -73,6 +74,7 @@ body {
     padding: 10px 15px; /* Ajoutez du padding horizontal pour éviter que le texte soit coupé */
     display: inline-block; /* Assurez-vous que le padding est respecté */
 }
+
 .menu li {
     margin: 0 5px; /* Ajoutez une marge pour espacer les éléments du menu */
 }
@@ -84,6 +86,7 @@ body {
 .menu.active {
     display: block;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -192,6 +195,7 @@ body {
         0 3px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(2px);
 }
+
 .touches button, .touches-food button {
     flex: 1;
     margin: 0 5px;
@@ -269,10 +273,11 @@ body {
 .footer p {
     margin: 2px 0; /* Réduire la marge pour les paragraphes */
 }
+
 .popup {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2000; /* Assurez-vous que le z-index est plus élevé que celui du navbar */
     left: 0;
     top: 0;
     width: 100%;
@@ -357,6 +362,4 @@ body {
         padding: 5px;
         font-size: 10px;
     }
-
-    
 }
