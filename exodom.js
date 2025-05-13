@@ -1,4 +1,4 @@
-// demo 1
+// demo 1 afficher un bouton afficher dom
 function afficherDOM() {
     console.log(document); // Montre l'objet DOM entier dans la console
   }
