@@ -4,7 +4,8 @@ const quotes = [
     { text: "Rien n'est permanent sauf le changement.", author: "Héraclite" },
     { text: "La simplicité est la sophistication suprême.", author: "Léonard de Vinci" },
     { text: "Ce qui compte,chez un homme, ce n'est pas sa couleur de peau ou la texture de sa chevelure, mais la texture et la qualité de son âme.", author: "Martin Luther King" },
-    { text: "C'est un petit pas pour l'homme, un bond de géant pour l'humanité", author: "Niel Amstrong" }
+    { text: "C'est un petit pas pour l'homme, un bond de géant pour l'humanité", author: "Niel Amstrong" },
+    {text:"Si tu pense être bête, va chez amazone, ils on peut etre des neurones ",author:"moi"},
 
 ];
 
