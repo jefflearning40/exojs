@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+//-------------------------------defi 1-----------------------------------        
+// function saluer() {
+//     console.log("Bonjour tout le monde");
+// }
+
+// function executerFonction(fonction) {
+//     fonction();
+// }
+
+// // Appeler executerFonction avec saluer en tant qu'argument
+// executerFonction(saluer);
+//------------------------------------defi 2 ---------------------------------
+// function direbonjour(nom){
+//     document.getElementById('result').prepend('bonjour' + nom);
+// }
+
+// function direAuRevoir(nom){
+//     document.getElementById('result').prepend('aurevoir' + nom);
+// }
+
+// function acceuillir(nom, callback){
+//     // nom=prompt("votre nom :") ;
+//    callback(nom);
+// }
+
+// acceuillir(prompt('ton prénom'), direbonjour);
+// acceuillir(prompt('ton prénom'), direAuRevoir);
+// // acceuillir("Nina",direbonjour);
+// // acceuillir("Bernard",direAuRevoir);
+
+// -----------------------------------------------------defi 3 --------------------------------
+// function poserQuestion(question,ouiCallback,nonCallback){
+//     let reponse=confirm(question);
+//     if (reponse){
+//         ouiCallback();
+//     } else {
+//         nonCallback();
+//     }
+// }
+// //-----------------------------------------------------------------------------------------------------
+// function oui(){
+//     alert("Super choix !");
+// } 
+
+// function non(){
+//     alert("Dommage !");
+// }
+
+// poserQuestion("Veux tu apprendre js ? :oui non", oui, non);
+
+// --------------------------------------defi 4 --------------------------------------------------------------
+let animaux=["chien","chat","canard","hamster","canari"];
+
+function animer(animaux,callback){
+ let index=0;
+console.log(animaux)
+let interval=setInterval(function(){
+   
+    console.log(animaux[index]);
+     index++;
+     if (index === animaux.length){
+        clearInterval(interval);
+        console.log("clear");
+        index=0;
+        callback();
+     }
+},1000);
+
+}
+
+function calbackexollbackanimaux(){
+    alert("derniere etape");
+}
+animer(animaux,callbackanimaux);
+
+
+
+
+    </script>
+</body>
+</html>
