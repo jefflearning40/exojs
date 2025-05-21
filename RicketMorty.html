@@ -39,6 +39,7 @@
     let data = await response.json();
     //le nombre est lu dans data/info/count
     totalPersonnages = data.info.count;
+    console.log(totalPersonnages);
   }
 
   //execute la fonction async 
@@ -64,14 +65,18 @@
       }
 //sinon data=reponse obtenu par le try c'est a dire le data visible dans la console
       let data = await response.json();
+      console.log(data);
 //on dispatch les elements de data par nom, espece,le statu et un image
       
       let name = data.name;
       let species = data.species;
       let status = data.status;
       let image = data.image;
-
-      //affichage des données récuprées par le try et dispatchés par categorie.La zone affichage est declaree a la ligne 50
+      console.log(name);
+      console.log(species);
+      console.log(status);
+      console.log(image);
+      //affichage des données récuperées par le try et dispatchés par categorie.La zone affichage est declaree a la ligne 50
       zoneAffichage.innerHTML = `
         <img src="${image}" alt="${name}">
         <h3>${name}</h3>
