@@ -55,10 +55,7 @@ async function fetchApiPokemon(id){
        image.src = data.sprites.front_default;
        console.log(image);
        pokemonDiv.appendChild(image);
-    //    const sound= document.createElement("audio");
-    //    sound.setAttribute("controls","");
-    //    sound.src=data.cries.latest;
-    //    pokemonDiv.appendChild(sound);
+    
     const  sounds =  new Audio(data.cries.latest);
     sounds.play();
     } catch(error) {
@@ -76,31 +73,7 @@ document.getElementById("btn-pokemon").addEventListener("click", function () {
     fetchApiPokemon(id);
 });
 
-//     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-//     .then(response => response.json())
-//     .then(data => {
-//         const name = data.name.charAt(0).toUpperCase() + data.name.slice(1);
-//         const image = data.sprites.front_default;
-//         const types = data.types.map(item => item.type.name);
-//         const typeNames = types.join(", ");
-//         const mainType = types[0];
-//         const number = `${String(data.id).padStart(3, '0')}`;
-//         const bgColor = typeColors[mainType] || "#333";
 
-//         document.getElementById("pokemon").innerHTML = `
-//         <h3>${number} - ${name}</h3>
-//         <img src="${image}" alt="${name}" />
-//         <p>Type : ${typeNames}</p>
-//        ` ;
-
-//         document.getElementById("pokemon").style.backgroundColor = bgColor;
-//     })
-
-//     .catch(error => {
-//         document.getElementById("pokemon").innerHTML = "Erreur lors du chargement du Pokemon.";
-//         console.error(error);
-//     });
-// });
         
 
        
