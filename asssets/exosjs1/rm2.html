@@ -1,0 +1,75 @@
+<div id="galerie" class="grille"></div>
+<button id="btn-multi" class="btn btn-primary">Afficher 10 personnages</button>
+
+<style>
+  .grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .carte {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .carte img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<script>
+  let pageActuelle = 0;
+  let totalPersonnages = 0;
+  const galerie = document.getElementById("galerie");
+  const boutonMulti = document.getElementById("btn-multi");
+
+  async function initialiserNombreDePersonnages() {
+    const response = await fetch("https://rickandmortyapi.com/api/character");
+    const data = await response.json();
+    totalPersonnages = data.info.count;
+  }
+
+  initialiserNombreDePersonnages();
+
+  boutonMulti.addEventListener("click", async function () {
+    const debut = pageActuelle * 10 + 1;
+    const fin = debut + 9;
+
+    galerie.innerHTML = "";
+
+    pageActuelle++;
+
+    for (let id = debut; id <= fin; id++) {
+      try {
+        const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+        const data = await response.json();
+
+        const carte = document.createElement("div");
+        carte.className = "carte";
+
+        carte.innerHTML = `
+          <img src="${data.image}" alt="${data.name}">
+          <h3>${data.name}</h3>
+          <p>${data.species}</p>
+        `;
+
+        galerie.appendChild(carte);
+      } catch (error) {
+        console.error("Erreur lors de la récupération du personnage :", error);
+      }
+    }
+
+    if (fin >= totalPersonnages) {
+      pageActuelle = 0;
+    }
+  });
+</script>
