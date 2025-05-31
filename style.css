@@ -1,0 +1,9 @@
+h1{
+    font-weight: normal;
+    color:red;
+}
+p{
+    text-decoration: underline;
+    color:navy;
+    text-decoration-color: green;
+}
